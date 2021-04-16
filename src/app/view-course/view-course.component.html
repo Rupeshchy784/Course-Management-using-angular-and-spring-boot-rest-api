@@ -1,0 +1,26 @@
+<h3 class="text-center" style="color: aqua;">Detail of selected Course</h3>
+<div id="course" class="container">
+    <div class="card">
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <th>
+                        CourseId
+                    </th>
+                    <th>
+                        Title
+                    </th>
+                    <th>
+                        Discription
+                    </th>
+                </thead>
+                <tbody>
+                    <td>{{course.courseId}}</td>
+                    <td>{{course.title}}</td>
+                    <td>{{course.discription}}</td>
+                </tbody>
+            </table>
+            <button (click)="showDetail()" type="button" class="btn btn-danger">Back</button>
+        </div>
+    </div>
+</div>

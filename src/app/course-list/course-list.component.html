@@ -1,0 +1,39 @@
+<h3 class="text-center" style="color: aqua;">Detail of available Course</h3>
+<div id="course" class="container">
+    <div class="card">
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <th>
+                        CourseId
+                    </th>
+                    <th>
+                        Title
+                    </th>
+                    <th>
+                        Discription
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of course">
+                        <td>{{item.courseId}}</td>
+                        <td>{{item.title}}</td>
+                        <td>{{item.discription}}</td>
+                        <td>
+                            <button type="button" class="btn btn-primary"
+                                (click)="goToEditCourse(item.courseId)">Edit</button>&nbsp;&nbsp;
+                            <button type="button" class="btn btn-info"
+                                (click)="goToViewCourse(item.courseId)">View</button>&nbsp;&nbsp;
+                            <button type="button" class="btn btn-danger"
+                                (click)="deleteCourse(item.courseId)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button (click)="goToAddCourse()" type="button" class="btn btn-success">Add new Course</button>
+        </div>
+    </div>
+</div>
